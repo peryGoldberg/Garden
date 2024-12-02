@@ -1,0 +1,13 @@
+.listProduct{
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+justify-content: center;
+gap: 5%;
+text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    
+}

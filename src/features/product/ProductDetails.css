@@ -1,0 +1,28 @@
+.details{
+    width: 100vw;
+    height:  100vh;
+    background:rgba(243, 240, 240, 1);
+    position: fixed;
+    top: 0;
+   
+    
+}
+.div-details{
+
+    margin: 5%;
+    gap: 4%;
+    display: flex; 
+    
+}
+.img-details img{
+    margin-right: 2%;
+    width: 40vw;
+    border-radius: 5%;
+}
+.details p{
+    width: 70%;
+    direction: rtl;
+}
+.p-describtion{
+    direction: rtl;
+}

@@ -1,0 +1,23 @@
+.shopping-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.shopping-table th, .shopping-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.shopping-table th {
+    background-color: #f2f2f2;
+}
+
+.shopping-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.shopping-table tr:hover {
+    background-color: #f1f1f1;
+}

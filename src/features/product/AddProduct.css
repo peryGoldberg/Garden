@@ -1,0 +1,23 @@
+
+  
+  .background-image {
+    background-image: url(https://www.ikea.com/images/torparoe-torparoe-8b1581a5fdea9cafee86fc8f1a95d505.jpg?f=sg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    align-items: center;
+    color: white;
+   
+   
+    text-align: center; 
+  }
+  
+.add-product{
+    width: 100%;
+    margin-top:5%; 
+    padding-top: 2%;
+    height: 100vh;
+    background-color: rgba(243, 240, 240, 0.9); /* Add a semi-transparent background color to the text for readability */
+   
+  }
