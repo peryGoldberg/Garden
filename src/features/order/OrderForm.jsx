@@ -139,27 +139,27 @@ const OrderForm = () => {
                    <Typography> תשלום</Typography>
                    <div style={{background:'#F0F2DA',padding:'5%',gap:'5%',margin:'2%',display:'flex',justifyContent:'center',flexDirection:'column'}}>
                    <div id="numAcount" style={{gridRow: '1' ,  gridColumn: '1' , display: 'flex', alignItems: 'flex-end' }}>
-                   <PaymentOutlinedIcon sx={{ color: 'action.active', mr: 1, my: 2,color:'#9c27b0'  }} />                     
+                   <PaymentOutlinedIcon sx={{  mr: 1, my: 2,color:'#9c27b0'  }} />                     
                         <TextField color='secondary' style={{margin:'1%', width: '90%'}} id="standard-basic" label="מספר אשראי*" htmlFor="numAcount" variant="outlined"
                             type="number"   {...register("num", { required: 'num is required' })}/>
                         {errors.num && <Alert style={{ margin: "0% 0%" }} severity="error">שדה חובה</Alert>}
                     </div>
 
                     <div id="tz" style={{ display: 'flex', alignItems: 'flex-end'}}>
-                    <AccountCircleOutlinedIcon sx={{ color: 'action.active', mr: 1, my: 2,color:'#9c27b0'  }} />
+                    <AccountCircleOutlinedIcon sx={{mr: 1, my: 2,color:'#9c27b0'  }} />
                         <TextField color='secondary' style={{margin:'1%', width: '90%'}} id="standard-basic" label="ת.ז בעל הכרטיס*" htmlFor="tz" variant="outlined"
                             type="number"   {...register("tz", { required: 'tz is required' })}/>
                        {errors.tz && <Alert style={{ margin: "0% 0%" }} severity="error">שדה חובה</Alert>}
                     </div>
                     <div style={{display:'flex',justifyContent:'center'}}>
                     <div  style={{flex:'1', display: 'flex', alignItems: 'flex-end'}}>
-                    <HttpsOutlinedIcon sx={{ color: 'action.active', mr: 1, my: 2,color:'#9c27b0'  }} />
+                    <HttpsOutlinedIcon sx={{  mr: 1, my: 2,color:'#9c27b0'  }} />
                         <TextField color='secondary' style={{margin:'4%', width: '90%'}} id="standard-basic" label="CVV*"  variant="outlined"
                             type="text" defaultValue='CVV'  {...register("cvv", { required: 'cvv is required' })}></TextField>
                                    {errors.cvv && <Alert style={{ margin: "0% 0%" }} severity="error">שדה חובה</Alert>}
                     </div>
                     <div  style={{flex:'4', display: 'flex', alignItems: 'flex-end'}}>
-                    <TodayOutlinedIcon sx={{ color: 'action.active', mr: 1, my: 2,color:'#9c27b0' }} />
+                    <TodayOutlinedIcon sx={{  mr: 1, my: 2,color:'#9c27b0' }} />
                     <LocalizationProvider sx={{bgColor:'#9c27b0 '}} dateAdapter={AdapterDayjs}>
                      <DatePicker  color='secondary' sx={{margin:'1%', width: '87%',color:'#9c27b0'}} />
                     </LocalizationProvider>

@@ -47,7 +47,7 @@ console.log(arr)
   return (
     <>
 
-      <Typography sx={{ marginTop: '7%',textAlign:'center' ,fontSize:'30px'}}><b>סל קניות</b></Typography>
+      <Typography sx={{ marginTop: '15%',textAlign:'center' ,fontSize:'30px'}}><b>סל קניות</b></Typography>
       <div style={{textAlign:'center' }}>
     {arr.length==0&&<Typography>לא נמצאו מוצרים בסל הקניות</Typography>}
     </div>

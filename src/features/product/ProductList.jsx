@@ -6,7 +6,7 @@ import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import Stack from '@mui/material/Stack';
-import "./Productlist.css";
+import "./ProductList.css";
 import { Button } from '@mui/base';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
