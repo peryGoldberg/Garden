@@ -77,7 +77,7 @@ export default function NavBar() {
           
           <Link to="list" >  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>כל העציצים</Button></Link>
 
-          <Link to="About" ><Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>אודות </Button></Link>
+          {/* <Link to="About" ><Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>אודות </Button></Link> */}
           <Link to="" >  <Button color="inherit"><img style={{width:'70px'}} src="https://rubybot.co.il/_next/image?url=https%3A%2F%2Fapi.rubybot.co.il%2Fgenerated_images%2FFQddAPqQxqklizmanxARHKeXczvOjOotVxIwAVnzSuPtiubyVPiJoGSjmHvWtHrL.jpeg&w=640&q=75"/></Button></Link>
 
 
