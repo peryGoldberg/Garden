@@ -67,12 +67,12 @@ const ShoppingCartItem = ({ item }) => {
         overflow: 'auto'
       }}>{item.cnt}</div>
       <div style={{
-        width: '100px', paddingTop: '2%',
+        width: '150px', paddingTop: '2%',
         height: '40px',
         overflow: 'auto'
       }}>{`${item.price}.00 ₪`}</div>
       <div style={{
-        width: '100px', paddingTop: '2%',
+        width: '150px', paddingTop: '2%',
         height: '40px',
         overflow: 'auto'
       }}> {`${item.price * item.cnt}.00 ₪`}</div>

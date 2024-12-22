@@ -21,11 +21,18 @@ export const deleteorderById = (id) => {
     return axios.delete(`${baseUrl}order/`);
 }
 
-export const  getAllOrderByUserId= (id) => {
-    return axios.get(`${baseUrl}order/`);
+export const  getAllOrderByUserId= (id,token) => {
+    return axios.get(`${baseUrl}order/:id`,{
+        headers: {
+                   "x-access-token": token
+               }});
 }
 
-export const  updateorderSetOff= (login) => {
-    return axios.put(`${baseUrl}order/`);
+export const  updateorderSetOff= (id,token) => {
+    return axios.put(`${baseUrl}order/:${id}`,{
+        headers: {
+                   "x-access-token": token
+               }
+            });
 }
    

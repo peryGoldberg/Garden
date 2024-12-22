@@ -1,6 +1,7 @@
 
 
 .container {
+    font-family: 'Varela Round';
     text-align: center;
     display: flex;
     height: 100vh;
@@ -27,3 +28,7 @@
     object-fit: cover;
 }
 
+.text{
+    font-family: 'Varela Round';
+     width: '100%'
+}

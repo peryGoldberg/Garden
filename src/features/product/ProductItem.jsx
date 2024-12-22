@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-
 import Stack from '@mui/material/Stack';
 import {useDispatch} from 'react-redux';
 import {addShoppingProduct} from './ProductSlice'
@@ -19,8 +18,9 @@ import { useEffect,useState } from 'react';
 import {  useNavigate } from 'react-router-dom';
 import { Button, Link } from '@mui/material';
 import {selectProductForEdit} from './ProductSlice';
+import Alert from '@mui/material/Alert';
+import Swal from 'sweetalert2'
 const  ProductItem= ({one,remove,setRemove}) => {
-//   const Swal = require("sweetalert2");
 
   let navigate=useNavigate();
    const [flag, setFlag] = useState(true);
@@ -44,11 +44,6 @@ const  ProductItem= ({one,remove,setRemove}) => {
     disPatch(addCount((1)))
   }
 
-  let goToUpdate=(e)=>{
-e.preventDefault();
-    navigate("/UpdateItem")
-  }
-
   let disPatch = useDispatch();
   let plus=false;
  let update=(e)=>{
@@ -59,27 +54,27 @@ e.preventDefault();
 let removItem=(e)=>{
   e.preventDefault();
 
-//   Swal.fire({
-//     title: "?האם אתה בטוח שברצונך למחוק",
-//     icon: "warning",
-//     showCancelButton: true,
+  Swal.fire({
+    title: "?האם אתה בטוח שברצונך למחוק",
+    icon: "warning",
+    showCancelButton: true,
     
-//     confirmButtonColor: "#3085d6",
-//     cancelButtonColor: "#d33",
-//     confirmButtonText: "yes!"
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       console.log(one._id)
-//   deleteProductById(one._id,user.token).then(res => {
-//     //   Swal.fire({
-//     //     title: "!נמחק",
-//     //     text: "המוצר שלך נמחק בהצלחה",
-//     //     icon: "success"
-//     //   });
-//     setRemove(!remove);
-// }).catch((err) => { alert("התרחשה שגיאה") })
-//     }
-//   });
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "yes!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log(one._id)
+  deleteProductById(one._id,user.token).then(res => {
+      Swal.fire({
+        title: "!נמחק",
+        text: "המוצר שלך נמחק בהצלחה",
+        icon: "success"
+      });
+    setRemove(!remove);
+}).catch((err) => { alert("התרחשה שגיאה") })
+    }
+  });
 
   
 

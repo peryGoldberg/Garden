@@ -33,7 +33,6 @@ const LogIn = () => {
     });
     let dispatch = useDispatch()
     const navigate = useNavigate();
-    // const Swal = require('sweetalert2')
 
     const onSubmit = async (details) => {
         {
@@ -71,40 +70,40 @@ const LogIn = () => {
         <>
 
 
-            <form style={{ padding: '10% 0%',textAlign:'center',direction:'rtl',backgroundColor:'#F0F2DA' }} onSubmit={handleSubmit(onSubmit)}>
+            <form style={{ margin:'0%', padding: '10% 0%',textAlign:'center',direction:'rtl',backgroundColor:'#F0F2DA' }} onSubmit={handleSubmit(onSubmit)}>
                 <LockOpenIcon style={{width:'500px',color:'#9c27b0'}}/>
-                <Typography style={{color:'#9c27b0'}}>התחברות</Typography>
+                <Typography style={{fontFamily: 'Varela Round' ,color:'#9c27b0'}}>התחברות</Typography>
               
                
                
                 <div style={{ margin: "flex" ,background:'#F0F2DA'}}>
 
-                    <div id="userName" >
-                        <TextField color='secondary' style={{margin:'1%', width: '30%'}} id="outlined-basic" label="שם*" htmlFor="userName" variant="outlined"
+                    <div id="userName">
+                        <TextField color='secondary' style={{fontFamily: 'Varela Round' ,margin:'1%', width: '30%'}} id="outlined-basic" label="שם*" htmlFor="userName" variant="outlined"
                             type="text" {...register("userName")} />
 
-                        {errors.userName && <Alert style={{ margin: "0% 35%" }} severity="error">{errors.userName.message}</Alert>}
+                        {errors.userName && <Alert style={{fontFamily: 'Varela Round' , margin: "0% 35%" }} severity="error">{errors.userName.message}</Alert>}
                     </div>
 
 
                     <div id="email">
-                        <TextField color='secondary' style={{margin:'1%', width: '30%'}} id="standard-basic" label="מייל*" htmlFor="email" variant="outlined"
+                        <TextField color='secondary' style={{fontFamily: 'Varela Round' ,margin:'1%', width: '30%'}} id="standard-basic" label="מייל*" htmlFor="email" variant="outlined"
                             type="email" {...register("email", { required: 'email is required' })} />
 
-                        {errors.email && <Alert style={{ margin: "0% 35%" }} severity="error">{errors.email.message}</Alert>}
+                        {errors.email && <Alert style={{fontFamily: 'Varela Round' , margin: "0% 35%" }} severity="error">{errors.email.message}</Alert>}
                     </div>
 
                     <div id="password">
-                        <TextField color='secondary' style={{margin:'1%', width: '30%'}} id="standard-basic" label="סיסמא*" htmlFor="password" variant="outlined"
+                        <TextField color='secondary' style={{fontFamily: 'Varela Round' ,margin:'1%', width: '30%'}} id="standard-basic" label="סיסמא*" htmlFor="password" variant="outlined"
                             type="password" {...register("password", { required: 'password is required' })} />
-                        {errors.password && <Alert style={{ margin: "0% 35%" }} severity="error">{errors.password.message}</Alert>}
+                        {errors.password && <Alert style={{fontFamily: 'Varela Round' , margin: "0% 35%" }} severity="error">{errors.password.message}</Alert>}
                     </div>
 
                     <div style={{ margin: '2%' }}>
-                        <Button type="submit" color='secondary' variant="contained" endIcon={<SendIcon />}>    שליחה   </Button>
+                        <Button sx={{fontFamily: 'Varela Round'}} type="submit" color='secondary' variant="contained" endIcon={<SendIcon />}>    שליחה   </Button>
                     </div>
                 </div>
-                <Typography onClick={goSignOn}>אם אינך משתמש רשום, <Button style={{textDecoration:'none',color:'#9c27b0'}}>לחץ כאן</Button></Typography>
+                <Typography style={{fontFamily: 'Varela Round' }} onClick={goSignOn}>אם אינך משתמש רשום, <Button style={{fontFamily: 'Varela Round' ,textDecoration:'none',color:'#9c27b0'}}>לחץ כאן</Button></Typography>
             </form>
 
 

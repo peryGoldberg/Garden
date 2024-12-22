@@ -58,3 +58,77 @@
 .header-image{
   background-Color:'black';
 }
+/* כללי */
+.about-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-title h1 {
+  font-size: 3rem;
+  font-family: 'Kaushan Script', cursive;
+  color: #9c27b0; /* צבע של "אודות" */
+  margin-bottom: 20px;
+}
+
+.moving-line {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 20px; /* הוספתי רווח כדי להפריד בין "אודות" לשורת הטקסט */
+}
+
+.moving-line p {
+  font-size: 1.5rem;
+  color: #010101;
+  position: absolute;
+  white-space: nowrap; /* מונע חיתוך הטקסט */
+  animation: moveText 10s linear infinite;
+}
+
+/* אנימציה של תזוזת הטקסט */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%); /* מתחילים מחוץ למסך מימין */
+  }
+  100% {
+    transform: translateX(-100%); /* מגיעים לאזור השמאלי מחוץ למסך */
+  }
+}
+/* כותרת אודות */
+.elementor-heading-title {
+  font-size: 3rem;
+  font-family: 'Kaushan Script', cursive;
+  color: #9c27b0; /* צבע של "אודות" */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* שורת טקסט נעה */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  animation: marqueeAnimation 10s linear infinite;
+}
+
+.content {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* האנימציה של הטקסט הנע */
+@keyframes marqueeAnimation {
+  0% {
+      transform: translateX(100%); /* מתחילים מחוץ למסך מצד ימין */
+  }
+  100% {
+      transform: translateX(-100%); /* מגיעים לאזור השמאלי מחוץ למסך */
+  }
+}

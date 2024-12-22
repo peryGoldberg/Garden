@@ -20,7 +20,6 @@ const OrderForm = () => {
     let user = useSelector(us => us.currentUser.currentUser)
     let userId = useSelector(us => us.currentUser.currentUser)?._id
 
-    const Swal = require('sweetalert2')
 
     const navigate = useNavigate();
   
@@ -171,20 +170,20 @@ const OrderForm = () => {
                     <Button sx={{ width: '100%',margin:'1%' }} variant='contained' color='secondary' onClick={goToShop}> חזור לחנות </Button>
 
                 </form>
-                <div style={{fontFamily:'Ariel', padding: '1% 3%', margin: '0% 1%', border: 'solid 1px #b39ddb', borderRadius: '5%' }}>
-                    <Typography sx={{fontSize:'30px'}}>סך הכל בעגלה</Typography>
+                <div style={{ position: 'fixed', left: '0', width: '25%', padding: '1% 3%'}}>
+                    <Typography sx={{color: '#9c27b0',fontFamily: 'Varela Round',fontSize:'30px'}}>סך הכל בעגלה</Typography>
                     <div style={{width:'100%', direction: 'rtl', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridTemplateRows: 'repeat(4, 1fr)' }}>
-                        <Typography>
-                            {`  מספר המוצרים   `}
+                        <Typography sx={{fontFamily: 'Varela Round',}}>
+                             {`  מספר המוצרים:   `}{`${count()}`}
                         </Typography>
                         <Typography>
-                            {`:    ${count()}`}
+                           
+                        </Typography>
+                        <Typography  sx={{fontFamily: 'Varela Round'}}>
+                            סכום:   {`${allsum()}.00 ₪ `}
                         </Typography>
                         <Typography>
-                            סכום 
-                        </Typography>
-                        <Typography>
-                            {`${allsum()}.00 ₪ `}
+                          
                         </Typography>
 
                         

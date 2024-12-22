@@ -57,26 +57,27 @@ export default function NavBar() {
             </Link>
 
           </IconButton>
-          <Typography>
+          <Typography style={{ fontFamily: 'Varela Round' }}>
             {console.log(user)}
-              {user && <div style={{color:'white'}}> {`${user} שלום `} </div>}
+              {user && <div style={{color:'white'}}> {`${user}`} </div>}
           </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <CardHeader color="black"
-              avatar={<Avatar color='secondary' alt={user} src=" " />} />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1,fontFamily: 'Varela Round' }}>
+            <CardHeader color="black"  avatar={<Avatar sx={{fontFamily: 'Varela Round'}} color='secondary' alt={user} src=" " />} />
+             
              
           </Typography>
           
-          {typeUser && <Button color='secondary' style={{ backgroundColor: "#fff" }} onClick={myUserOut}>התנתקות</Button>}
-          {typeUser && typeUser==="USER"&&<Link to="">  <Button sx={{color:'#fff'}}>ההזמנות שלי</Button></Link>}
-         
-          {typeUser && typeUser === "ADMIN" && <Link to="AllOrders" >  <Button sx={{color:'#fff'}}>כל הזמנות </Button></Link>}
-          {typeUser && typeUser === "ADMIN" && <Link to="AddProduct" >  <Button sx={{color:'#fff'}}>הוספה</Button></Link>}
-          {!typeUser && <Link to="LogIn" ><Button sx={{color:'#fff'}}>התחברות</Button> </Link>}
-          {!typeUser && <Link to="SignOn" >  <Button sx={{color:'#fff'}}>הרשמה</Button></Link>}
+          {typeUser && <Button color='secondary' style={{ backgroundColor: "#fff",fontFamily: 'Varela Round' }} onClick={myUserOut}>התנתקות</Button>}
+          {typeUser && typeUser==="USER"&&<Link to="MyOrders">  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>ההזמנות שלי</Button></Link>}
           
-          <Link to="list" >  <Button sx={{color:'#fff'}}>כל העציצים</Button></Link>
-         
+          {typeUser && typeUser === "ADMIN" && <Link to="AllOrders" >  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>כל הזמנות </Button></Link>} 
+          {typeUser && typeUser === "ADMIN" && <Link to="AddProduct" >  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>הוספה</Button></Link>}
+          {!typeUser && <Link to="LogIn" ><Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>התחברות</Button> </Link>}
+          {!typeUser && <Link to="SignOn" >  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>הרשמה</Button></Link>}
+          
+          <Link to="list" >  <Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>כל העציצים</Button></Link>
+
+          <Link to="About" ><Button sx={{color:'#fff',fontFamily: 'Varela Round'}}>אודות </Button></Link>
           <Link to="" >  <Button color="inherit"><img style={{width:'70px'}} src="https://rubybot.co.il/_next/image?url=https%3A%2F%2Fapi.rubybot.co.il%2Fgenerated_images%2FFQddAPqQxqklizmanxARHKeXczvOjOotVxIwAVnzSuPtiubyVPiJoGSjmHvWtHrL.jpeg&w=640&q=75"/></Button></Link>
 
 

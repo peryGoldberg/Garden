@@ -1,0 +1,40 @@
+.orders-container {
+    margin: 2%;
+    direction: rtl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 כרטיסים בשורה */
+    gap: 7% 1%;  /* רווח בין הכרטיסים */
+    padding: 20px;
+  }
+ 
+  .order-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* וודא שהכרטיס יתפוס את כל הגובה */
+  }
+  
+  .order-card h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .order-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .product-item {
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

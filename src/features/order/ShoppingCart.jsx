@@ -47,9 +47,9 @@ console.log(arr)
   return (
     <>
 
-      <Typography sx={{ marginTop: '15%',textAlign:'center' ,fontSize:'30px'}}><b>סל קניות</b></Typography>
+      <Typography sx={{fontFamily: 'Varela Round', marginTop: '15%',textAlign:'center' ,fontSize:'30px'}}><b>סל קניות</b></Typography>
       <div style={{textAlign:'center' }}>
-    {arr.length==0&&<Typography>לא נמצאו מוצרים בסל הקניות</Typography>}
+    {arr.length==0&&<Typography sx={{fontFamily: 'Varela Round'}}>לא נמצאו מוצרים בסל הקניות</Typography>}
     </div>
       <div style={{ direction: 'rtl', display: 'flex',margin:'2%',justifyContent:'space-between'}}>
 
@@ -57,11 +57,11 @@ console.log(arr)
 
           <table>
             <tr >
-              <th style={{ paddingRight: '280px' }}>מוצר</th>
-              <th style={{ paddingRight: '110px' }}>שינוי כמות</th>
-              <th style={{ paddingRight: '50px' }}>כמות</th>
-              <th style={{ paddingRight: '30px' }}>מחיר</th>
-              <th style={{ paddingRight: '40px' }}>סכום</th>
+              <th style={{fontFamily: 'Varela Round', paddingRight: '270px' }}>מוצר</th>
+              <th style={{fontFamily: 'Varela Round', paddingRight: '120px' }}>שינוי כמות</th>
+              <th style={{fontFamily: 'Varela Round', paddingRight: '70px' }}>כמות</th>
+              <th style={{fontFamily: 'Varela Round', paddingRight: '50px' }}>מחיר</th>
+              <th style={{fontFamily: 'Varela Round', paddingRight: '70px' }}>סכום</th>
             </tr>
           </table>
           <ul>
@@ -71,29 +71,29 @@ console.log(arr)
         </div>}
 
         <div style={{padding:'2% 7%',margin:'0% 1%', border:'solid 1px #b39ddb',borderRadius: '5%'}}>
-          <Typography sx={{fontSize:'25px'}}>סך הכל בעגלה</Typography>
+          <Typography style={{fontFamily: 'Varela Round',fontSize:'25px'}}>סך הכל בעגלה</Typography>
           <div style={{direction:'rtl', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridTemplateRows: 'repeat(4, 1fr)' }}>
-            <Typography>
-              {`  מספר מוצרים בסל  `}
+            <Typography style={{fontFamily: 'Varela Round'}}>
+              {`  מספר מוצרים בסל:  `} {`${count()}`}
             </Typography>
             <Typography>
-              {`:    ${count()}`}
+             
             </Typography>
-            <Typography>
-              סכום ביניים
+            <Typography  style={{fontFamily: 'Varela Round'}}>
+              סכום ביניים:  {`${allsum()}.00 ₪ `}
             </Typography>
-            <Typography>
-              {`${allsum()}.00 ₪ `}
+            <Typography  style={{fontFamily: 'Varela Round'}}>
+            
             </Typography>
           
           
           <div style={{gridRow: '3' , 
   gridColumn: '1'  }}>
-            <Button sx={{width:'200%',marginBottom:'5%'}} variant='contained' color='secondary' onClick={goList}>המשך לקנות</Button>
+            <Button sx={{fontFamily: 'Varela Round',width:'200%',marginBottom:'5%'}} variant='contained' color='secondary' onClick={goList}>המשך לקנות</Button>
           </div>
           <div style={{gridRow: '4' , 
   gridColumn: '1'  }}>
-            <Button disabled={disabled} sx={{width:'200%'}}  variant='contained' color='secondary' onClick={goForm} >סיים הזמנה</Button>
+            <Button disabled={disabled} sx={{fontFamily: 'Varela Round',width:'200%'}}  variant='contained' color='secondary' onClick={goForm} >סיים הזמנה</Button>
           </div>
         </div>
         </div>

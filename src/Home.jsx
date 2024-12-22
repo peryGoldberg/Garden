@@ -1,5 +1,4 @@
 
-// import { border } from "@mui/system";
 import "./Home.css";
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
@@ -9,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import Login from './features/user/LogIn'
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-// import Karusale from './Karusale.js';
 import  { useState, useEffect } from 'react';
+import ScrollingText from "./ScrollingText ";
+import MyOrders from "./features/order/MyOrders";
 
 const Home = () => {
     const image = [
@@ -54,7 +54,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 500,
   [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
+    width: '100% !important', 
     height: 100,
   },
   '&:hover, &.Mui-focusVisible': {
@@ -125,20 +125,16 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
                     <img style={{ width: "100%", marginTop: "-150px",opacity:'0.7' }} src="https://www.ikea.com/images/-3ebbd76cf03171f7aa8e6e7101e6a968.jpg?f=sg"
         alt={`Image ${currentImageIndex + 1}`} />
                 </div>
-
-                {/* <div className="header-img" style={{backgroundColor:'black', width: "100%", height: "600px", overflow: "hidden",opacity:0.9 }}>
-                    <img style={{ width: "100%", marginTop: "-150px",opacity:'0.7' }} src={image[currentImageIndex]}
-        alt={`Image ${currentImageIndex + 1}`} />
-                </div> */}
-                <Typography sx={{fontSize:'30px',margin:'1%'}}>גינה חלומית או מרפסת מפנקת? </Typography>
-                <Typography sx={{fontSize:'20px',margin:'0% 30%'}}>הוספה של צמחים ופרחים לחלל תורמת לתחושת הרווחה הכללית, מפחיתה לחצים ומעודדת יצירתיות. לכן הרעיונות שלנו למתנות ירוקות גם יעזרו לכם לשמח את יקיריכם עם פריט יפה, וגם ישפרו את חיי היום-יום שלהם. </Typography>
+                <Typography sx={{fontFamily: 'Varela Round',fontSize:'30px',margin:'1%'}}>גינה חלומית או מרפסת מפנקת? </Typography>
+                <Typography sx={{fontFamily: 'Varela Round',fontSize:'20px',margin:'0% 30%'}}>הוספה של צמחים ופרחים לחלל תורמת לתחושת הרווחה הכללית, מפחיתה לחצים ומעודדת יצירתיות. לכן הרעיונות שלנו למתנות ירוקות גם יעזרו לכם לשמח את יקיריכם עם פריט יפה, וגם ישפרו את חיי היום-יום שלהם. </Typography>
  
                 <div style={{margin:'2%'}}>
-                <Button variant="contained" color="secondary" onClick={()=>{ navigate('/list')  }}
+                <Button sx={{fontFamily: 'Varela Round'}} variant="contained" color="secondary" onClick={()=>{ navigate('/list')  }}
                    
               >לכל המוצרים</Button>
                 </div>
-
+              
+               
               
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '90%',margin:'0% 4%'}}>
        {images.map((image) => (
@@ -152,11 +148,12 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
-            <Typography
+            <Typography 
               component="span"
               variant="subtitle1"
               color="inherit"
               sx={{
+                fontFamily: 'Varela Round',
                 position: 'relative',
                 p: 4,
                 pt: 2,
